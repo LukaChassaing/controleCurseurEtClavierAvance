@@ -20,7 +20,7 @@ void loop() {
     char* readErrors();
     // Returns comme-delimited string of all available brain data.
     // Sequence is as below.
-    // char* readCSV();
+     //char* readCSV();
     // Individual pieces of brain data.
     // uint8_t readSignalQuality();
     // uint8_t readAttention();
@@ -35,8 +35,34 @@ void loop() {
     // uint32_t readLowGamma();
     // uint32_t readMidGamma();
     if (brain.update()) {
-        Serial.println(brain.readErrors());
-        Serial.println(brain.readDelta());
-        Serial.println("\n");
+      Serial.print(brain.readCSV());
+      // Serial.print(brain.readErrors());
+      // Serial.print("|");
+      // Serial.print(brain.readSignalQuality());
+      // Serial.print("|");
+      // Serial.print(brain.readAttention());
+      // Serial.print("|");
+      // Serial.print(brain.readMeditation());
+      // Serial.print("|");
+      // //Serial.print("PowerArray : ");
+      // //Serial.print(brain.readPowerArray());
+      // //Serial.print("\n");
+      // Serial.print(brain.readDelta());
+      // Serial.print("|");
+      // Serial.print(brain.readTheta());
+      // Serial.print("|");
+      // Serial.print(brain.readLowAlpha());
+      // Serial.print("|");
+      // Serial.print(brain.readHighAlpha());
+      // Serial.print("|");
+      // Serial.print(brain.readLowBeta());
+      // Serial.print("|");
+      // Serial.print(brain.readHighBeta());
+      // Serial.print("|");
+      // Serial.print(brain.readLowGamma());
+      // Serial.print("|");
+      // Serial.print(brain.readMidGamma());
+      // Serial.print("|");
+      Serial.print("\n");
     }
 }
