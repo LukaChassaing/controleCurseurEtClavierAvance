@@ -2,8 +2,6 @@
 
 Le Processing Brain Grapher est une application de visualisation en temps réel des données EEG (électroencéphalographie) provenant d'un casque Mattel MindFlex. Il permet d'afficher les signaux EEG bruts, ainsi que les valeurs d'attention et de méditation calculées par le casque.
 
-![Processing Brain Grapher Screenshot](screenshot.png)
-
 ## Configuration matérielle
 
 Le casque Mattel MindFlex est connecté à une carte Arduino Uno via une liaison série. Les fils du casque sont reliés aux broches appropriées de l'Arduino pour permettre la communication des données EEG.
