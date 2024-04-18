@@ -1,7 +1,4 @@
 class Channel {
-  // Value object class to store EEG power information for each channel.
-  // One instance per EEG channel.
-
   String name;
   int drawColor;
   String description;
@@ -9,15 +6,15 @@ class Channel {
   boolean relative;
   int maxValue;
   int minValue;
-  ArrayList points;
+  ArrayList<Point> points;
   boolean allowGlobal;
 
-  Channel(String _name, int _drawColor, String _description) {
-    name = _name;
-    drawColor = _drawColor;
-    description = _description;
-    allowGlobal = true;
-    points = new ArrayList();
+  Channel(String name, int drawColor, String description) {
+    this.name = name;
+    this.drawColor = drawColor;
+    this.description = description;
+    this.allowGlobal = true;
+    this.points = new ArrayList<Point>();
   }
 
   void addDataPoint(int value) {
@@ -31,9 +28,8 @@ class Channel {
 
   Point getLatestPoint() {
     if (points.size() > 0) {
-      return (Point)points.get(points.size() - 1);
-    }
-    else {
+      return points.get(points.size() - 1);
+    } else {
       return new Point(0, 0);
     }
   }
